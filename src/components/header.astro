@@ -1,0 +1,13 @@
+---
+// import {React} from 'astro/dist/internal/runtime'
+import ChangeTheme from "../services/changeTheme";
+---
+
+<header
+  class="fixed w-full h-12 flex items-center justify-between px-48 bg-white dark:bg-black"
+>
+  <a>
+    <img id="logo" class="w-12 h-auto" />
+  </a>
+  <ChangeTheme client:only />
+</header>
