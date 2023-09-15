@@ -11,8 +11,10 @@ const ChangeTheme = () => {
   useEffect(() => {
     if (theme === "dark") {
       document.querySelector("html").classList.add("dark");
+      document.querySelector("#logo").src = '/logoMarceDark.png';
     } else {
       document.querySelector("html").classList.remove("dark");
+      document.querySelector("#logo").src = '/logoMarceLight.png';
     }
   }, [theme]);
 
@@ -28,5 +30,3 @@ const ChangeTheme = () => {
 };
 
 export default ChangeTheme;
-
-
