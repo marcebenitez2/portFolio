@@ -2,16 +2,39 @@
 
 ---
 
-<<<<<<< HEAD
-<div class="h-screen flex justify-center">
-  <div
-    class="h-1/2 w-1/2 rounded-full bg-gradient-to-r from-blue-500 via-indigo-700 to-purple-800 blur-3xl"
-  >
-  Holaa
+<section class="h-screen flex justify-center">
+  <div class="degrade"></div>
+  <div class="text-container">
+    <h3 class="text-white text-6xl font-semibold">Sobre mi</h3>
+    <p class="w-1/2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quasi in, minima laborum veniam ipsam, accusantium ipsa enim quia suscipit neque et. Aliquam officiis veniam autem tempora! Optio, similique reiciendis.</p>
+    <p class="w-1/2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, aliquam minus. Neque commodi id pariatur sapiente impedit deserunt, veritatis deleniti aspernatur optio doloribus quas unde consequatur facilis sunt vero sit.</p>
   </div>
-</div>
-=======
-<section class="w-full h-screen">
-  <div class="w-48 h-64 bg-gradient-to-r from-blue-500 to-purple-600 transform hover:scale-98 hover:shadow-lg">asd</div>
 </section>
->>>>>>> ed66154fcb7d8319b9bd884116458cb9a3c4aaed
+
+<style>
+  .degrade {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 65%);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .text-container {
+    position: absolute;
+    z-index: 2; /* Coloca este contenedor sobre el fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .text-overlay {
+    mix-blend-mode: normal;
+  }
+</style>
