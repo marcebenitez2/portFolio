@@ -33,7 +33,7 @@ module.exports = {
           light: "#F881F3",
           DEFAULT: "#BC81F8",
         },
-        "custon-fixia": {
+        "custom-fuxia": {
           light: "#ff0080",
           default: "#7928ca"
         },

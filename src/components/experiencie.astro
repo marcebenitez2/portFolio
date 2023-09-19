@@ -1,38 +1,24 @@
 ---
-const proyectos = [
-  {
-    id: 1,
-    nombre: "VespFlix",
-    descripcion:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At odit debitis numquam itaque, quasi minima tempora dignissimos quae quo magni possimus! Dolores voluptatem ullam sint cum minus, atque enim totam.",
-  },
-  {
-    id: 2,
-    nombre: "VespFlix",
-    descripcion:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At odit debitis numquam itaque, quasi minima tempora dignissimos quae quo magni possimus! Dolores voluptatem ullam sint cum minus, atque enim totam.",
-  },
-  {
-    id: 3,
-    nombre: "VespFlix",
-    descripcion:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At odit debitis numquam itaque, quasi minima tempora dignissimos quae quo magni possimus! Dolores voluptatem ullam sint cum minus, atque enim totam.",
-  },
-];
+import {proyectos} from '../services/arrayProjects'
 ---
 
-<section class="h-screen flex flex-col gap-10 w-full">
-  <h1 class="text-6xl text-white font-semibold mdn:text-4xl">Experiencia</h1>
-  <div class="flex flex-col">
+<section class="h-screen flex flex-col gap-24">
+  <h1
+    class="dark:text-white text-6xl mdn:text-4xl font-semibold mdn:text-center"
+  >
+    Experiencia
+  </h1>
+  <div class="flex flex-col w-full">
     {
       proyectos.map((x) => (
-        <div class="flex">
+        <div class="w-full h-48 flex justify-between px-56 gap-28 2xln:px-14 xln:px-0 lgn:gap-10">
           <div class="flex flex-col items-center">
-            <span class="h-32 w-px bg-custom-pink-light"></span>
-            <span class="circulos w-14 h-14 flex justify-center items-center rounded-full ">
+            <span class="circulos w-14 h-20 flex justify-center items-center rounded-full ">
               {x.id}
             </span>
+            <span class="h-full w-px bg-custom-fuxia-light" />
           </div>
+          <div class="content"></div>
         </div>
       ))
     }
@@ -41,16 +27,19 @@ const proyectos = [
 
 <style>
   .content {
-    height: 20rem;
-    width: 70%;
+    height: 90%;
+    width: 100%;
     background:
       linear-gradient(#000000, #000000) padding-box,
-      linear-gradient(to right, #06080a, #f881f3, #26184b) border-box;
+      linear-gradient(to right, #06080a, #ff0080, #7928ca) border-box;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     border-right: 1px solid transparent;
+    border-radius: 15px;
   }
-  .circulos{
-    background: linear-gradient(90deg,#F881F3 ,#BC81F8);
+  .circulos {
+    background: linear-gradient(90deg, #7928ca, #ff0080);
   }
 </style>
+
+
