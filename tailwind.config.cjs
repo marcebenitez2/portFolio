@@ -33,6 +33,10 @@ module.exports = {
           light: "#F881F3",
           DEFAULT: "#BC81F8",
         },
+        "custon-fixia": {
+          light: "#ff0080",
+          default: "#7928ca"
+        },
         "custom-lavender": "#F0DAFB",
         "custom-white": "#FFFFFF",
       },
