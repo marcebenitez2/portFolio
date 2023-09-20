@@ -1,5 +1,5 @@
 ---
-import {proyectos} from '../services/arrayProjects'
+import { proyectos } from "../services/arrayProjects";
 ---
 
 <section class="h-screen flex flex-col gap-24">
@@ -11,14 +11,21 @@ import {proyectos} from '../services/arrayProjects'
   <div class="flex flex-col w-full">
     {
       proyectos.map((x) => (
-        <div class="w-full h-48 flex justify-between px-56 gap-28 2xln:px-14 xln:px-0 lgn:gap-10">
+        <div class="w-full h-48 flex justify-between px-56 gap-32 2xln:px-14 xln:px-0 lgn:gap-10">
           <div class="flex flex-col items-center">
-            <span class="circulos w-14 h-20 flex justify-center items-center rounded-full ">
+            <span class="circulos w-14 h-20 flex justify-center items-center rounded-full dark:text-black text-white">
               {x.id}
             </span>
             <span class="h-full w-px bg-custom-fuxia-light" />
           </div>
-          <div class="content"></div>
+          <div class="content">
+            <img src={`mockup${x.id}.png`} />
+            <div class="flex flex-col">
+              <h2 class="text-custom-fuxia-light text-3xl font-semibold">
+                {x.nombre}
+              </h2>
+            </div>
+          </div>
         </div>
       ))
     }
@@ -36,10 +43,9 @@ import {proyectos} from '../services/arrayProjects'
     border-bottom: 1px solid transparent;
     border-right: 1px solid transparent;
     border-radius: 15px;
+    display: flex;
   }
   .circulos {
     background: linear-gradient(90deg, #7928ca, #ff0080);
   }
 </style>
-
-

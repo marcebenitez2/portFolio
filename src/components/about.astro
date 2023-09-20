@@ -5,17 +5,17 @@
 <section class="h-screen flex justify-center mb-40">
   <div class="degrade"></div>
   <div class="text-container">
-    <h3 class="text-white text-6xl font-semibold mdn:text-4xl">Sobre mi</h3>
-    <p class="w-1/2 text-white">
-      ¡Hola! Soy <span class="text-[#F881F3]">Marcelo</span>, un apasionado
+    <h3 class="dark:text-white text-6xl font-semibold mdn:text-4xl">Sobre mi</h3>
+    <p class="w-1/2 dark:text-white">
+      ¡Hola! Soy <span class="text-[#ff0080]">Marcelo</span>, un apasionado
       desarrollador de software con tres años de experiencia. Graduado del
       Instituto Belgrano, me considero un autodidacta en constante crecimiento.
     </p>
-    <p class="w-1/2 text-white">
+    <p class="w-1/2 dark:text-white">
       Mi enfoque se centra en crear aplicaciones eficaces y eficientes, siempre
       teniendo en cuenta la experiencia del usuario. Creo que la tecnología debe
       simplificar la vida de las personas y mejorar sus experiencias diarias. <br
-      />Destaco la frase <span class="text-[#F881F3]"
+      />Destaco la frase <span class="text-[#ff0080]"
         >"Si puedes imaginarlo, puedes programarlo"</span
       > (Programador ATS)
     </p>
@@ -23,10 +23,11 @@
 </section>
 
 <style>
+
   .degrade {
     width: 100%;
     height: 100%;
-    background: linear-gradient(83.21deg, #7928ca 0%, #ff0080 100%);
+    background: linear-gradient(83.21deg, var(--degrade-color-1) 0%, var(--degrade-color-2) 100%);
     -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.7), transparent 65%);
     position: absolute;
     z-index: 1;
