@@ -2,7 +2,7 @@
 import { proyectos } from "../services/arrayProjects";
 ---
 
-<section class="h-screen flex flex-col gap-24">
+<section class="h-screen flex flex-col gap-24 dark:text-white">
   <h1
     class="dark:text-white text-6xl mdn:text-4xl font-semibold mdn:text-center"
   >
@@ -13,17 +13,18 @@ import { proyectos } from "../services/arrayProjects";
       proyectos.map((x) => (
         <div class="w-full h-48 flex justify-between px-56 gap-32 2xln:px-14 xln:px-0 lgn:gap-10">
           <div class="flex flex-col items-center">
-            <span class="circulos w-14 h-20 flex justify-center items-center rounded-full dark:text-black text-white">
+            <span class="circulos w-14 h-20 flex justify-center items-center rounded-full text-black text-white">
               {x.id}
             </span>
             <span class="h-full w-px bg-custom-fuxia-light" />
           </div>
           <div class="content">
-            <img src={`mockup${x.id}.png`} />
+            <img src={`mockup${x.id}.png`} class="h-36"/>
             <div class="flex flex-col">
-              <h2 class="text-custom-fuxia-light text-3xl font-semibold">
+              <h2 class={x.style}>
                 {x.nombre}
               </h2>
+              <p>{x.descripcion}</p>
             </div>
           </div>
         </div>
@@ -38,7 +39,7 @@ import { proyectos } from "../services/arrayProjects";
     width: 100%;
     background:
       linear-gradient(#000000, #000000) padding-box,
-      linear-gradient(to right, #06080a, #ff0080, #7928ca) border-box;
+      linear-gradient(to right, #06080a, #7928ca,#ff0080 ) border-box;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     border-right: 1px solid transparent;
@@ -49,3 +50,4 @@ import { proyectos } from "../services/arrayProjects";
     background: linear-gradient(90deg, #7928ca, #ff0080);
   }
 </style>
+<!-- 1100  738-->
